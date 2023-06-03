@@ -8,29 +8,29 @@ Clean Architecture is designed to separate concerns by organizing code into seve
 4. Testable: a system that is testable is a system that you have confidence working with — therefor it’s a system that is easy to extend or maintain.
 5. Strict on it’s dependency rules: source code dependencies can only point INWARDS, meaning that an inner circle will know nothing about an outer circle.
 
-### Entities
+## Entities
 1. Entities encapsulate the most general and high-level business rules.
 They are the least likely to change when something external changes.
 2. The entities do not depend on any of the other circles.
 
-### Use Case:
+## Use Case:
 1. The use case layer contains application specific business rules.
 2. The use case layer only depends on the entities. change in the entities will require a change in the use case layer, but changes to other layers won’t.
 
-### Interface Adapters:
+## Interface Adapters:
 Interface adapters layer contains a set of adapters that convert data from the format most convenient for the use cases and entities, to the format most convenient for some external agency such as the Database or the Web.
 
-### Repository
+## Repository
 Here we write and handle the data base operations.
 
-### Handlers 
+## Handlers 
 Here we do the data management. Here we recieve the data from the user and give them the output.
 
-### DB
+## DB
 Data Base connection and migartion is been done in this section
 
-### DI
+## DI
 This will hold the diffrent Dependencies which are injected and Wire package has been used.
 
-### Utils
+## Utils
 This section handles the utility functions such as password hashing, email creation etc.
